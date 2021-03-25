@@ -1,0 +1,25 @@
+:root { --primary-bg-color: #caa966; --secondary-bg-color: #fff; --primary-color: #caa966; --secondary-color: #000; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: var(--primary-bg-color); }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+a:hover { color: var(--primary-color); cursor: pointer; }
+button:hover { cursor: pointer; }
+.text--primary { color: var(--primary-color) !important; }
+.main--background { background: linear-gradient(200deg, rgba(227, 196, 127, 1) 0%, rgba(147, 109, 48, 1) 100%); }
+.row-grid-2 { display: grid; grid-template-columns: 1fr 1fr; }
+.row-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.row-grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
+.row-flex { display: flex; justify-content: center; align-items: center; }
+.slider .owl-dots .owl-dot:hover, .slider .owl-dots .owl-dot.active { background: var(--primary-color); }
+.slider .owl-dots .owl-dot { cursor: pointer; display: inline-block; line-height: 12px; margin: 0 5px; position: relative; text-indent: -9999px; -webkit-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s; background: #e8e8e8; width: 12px; height: 12px; border-radius: 50%; }
+.slider .owl-dots { bottom: 115px; padding: 0; position: absolute; width: 100%; z-index: 10; bottom: 10%; }
+.m-backtotop { -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; position: fixed; bottom: -50px; right: 20px; width: 40px; height: 40px; background-color: #b8a48d; border-radius: 25px; text-align: center; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);    /*opacity: 0;*/ overflow: hidden; color: #fff; border-radius: 0; z-index: 100 }
+.m-backtotop.active { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); bottom: 65px; opacity: 1; }
+.m-backtotop > div { -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.m-backtotop > div.arrow { position: absolute; top: 50%; left: 50%; }
+.m-backtotop > div.text { height: 100%; }
+.m-backtotop:hover { cursor: pointer; background: #a28869; box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1); }
+.m-backtotop > div.text { display: grid; transform: inherit; }
+.m-backtotop.active { transform: initial; border-radius: 50%; background: transparent; color: transparent; box-shadow: none; }
+.m-backtotop > div.text span { font-size: 12px; text-transform: uppercase; font-weight: 600; position: relative; }
+.m-backtotop > div.text span img { height: 30px; border-radius: 5px; }
