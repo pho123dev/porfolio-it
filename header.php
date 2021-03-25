@@ -17,27 +17,52 @@
   <header class="header" id="header">
     <div class="header-main sticky-header">
       <div class="container">
-       <?php
-            /**
-         * @hooked pho_header_container                - 10
-         * @hooked pho_site_branding                   - 20
-         * @hooked pho_primary_navigation              - 30
-         * @hooked pho_header_container_close          - 41
-         */
-            //do_action( 'pho_header' ); 
-            ?>
+        <div class="navbar-container-inner clearfix">
+          <div class="site-branding">
+            <div class="site-logo">
+
+            </div>
           </div>
+          <nav class="main-nav" id="nav">
+            <?php
+            wp_nav_menu( array(
+              'theme_location' => 'primary',
+              'container' => '',
+              'link_before'     => '<span>',
+              'link_after'      => '</span>',
+              'menu_id'         => 'main-navigation',
+              'menu_class'        => 'menu-list',
+            ) );
+
+            ?>
+          </nav>
         </div>
-      </header>
-      <header id="header-content-mobile" class="clearfix sticky-header">
-        <?php
-        /*
-         * @hooked pho_header_mobile_container        - 0
-         * @hooked pho_site_branding                  - 10
-         * @hooked pho_header_mobile                  - 20
-         * @hooked pho_nav_mobile                     - 30
-         * @hooked pho_header_mobile_container_close  - 41
-         */
-        //do_action( 'pho_header_mobile' );
-        ?>
-      </header>
+      </div>
+    </div>
+  </header>
+  <header id="header-content-mobile" class="clearfix sticky-header">
+    <div class="site-branding">
+      <div class="site-logo">
+
+      </div>
+    </div>
+    <div class="navbar-container-inner clearfix">
+      <div class="header-mobile-tools">
+        <a title="<?php esc_attr_e('Menu', 'pho') ?>" href="#" id="hamburger-icon" class="">
+          <span class="hamburger-icon-inner">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </span>
+        </a>
+      </div>
+      <?php $items_wrap = '';
+      printf(
+        '<nav id="main-nav-mobile" class="main-nav-mobile">
+      <div class="menu_header"><div class="menu_title"><i class="fas fa-bars"></i></div><div class="menu_close"><i class="fa fa-times" ></i></div></div>
+      <ul class="menu navigation-mobile">%s</ul>
+      </nav><div class="menu_overlay"></div>',
+        $items_wrap
+      ); ?>
+    </div>
+  </header>

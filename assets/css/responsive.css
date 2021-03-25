@@ -10,10 +10,10 @@
 	.container { width: 970px }
 }
 @media (min-width:1200px) {
-	.container { width: 1170px }
+	.container { width: 1110px }
 }
 @media (min-width:1300px) {
-	.container { max-width: 1300px; }
+	.container { max-width: 1110px; }
 }
 @media (min-width:768px) { }
 @media (min-width:992px) { }

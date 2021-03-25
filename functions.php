@@ -16,8 +16,6 @@
  */
 
 $file_includes = [
-    'includes/pho-template-functions.php',
-    'includes/pho-template-hooks.php',
     'includes/custom-post.php',
     'includes/theme-shortcode.php',
     'includes/theme-assets.php',             

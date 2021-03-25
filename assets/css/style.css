@@ -1,11 +1,14 @@
-:root { --primary-bg-color: #caa966; --secondary-bg-color: #fff; --primary-color: #caa966; --secondary-color: #000; }
+:root {
+	--primary-color: #282828;
+	--secondary-color: #f16b4e;
+	--text-color: #ffffff;
+}
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb { background: var(--primary-bg-color); }
+::-webkit-scrollbar-thumb { background: var(--primary-color); }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
-a:hover { color: var(--primary-color); cursor: pointer; }
+a:hover { color: var(--secondary-color); cursor: pointer; }
 button:hover { cursor: pointer; }
 .text--primary { color: var(--primary-color) !important; }
-.main--background { background: linear-gradient(200deg, rgba(227, 196, 127, 1) 0%, rgba(147, 109, 48, 1) 100%); }
 .row-grid-2 { display: grid; grid-template-columns: 1fr 1fr; }
 .row-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; }
 .row-grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }

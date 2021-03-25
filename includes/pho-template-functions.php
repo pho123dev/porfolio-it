@@ -72,10 +72,10 @@ if ( ! function_exists( 'pho_site_branding' ) ) {
 	function pho_site_branding() {
 		?>
 		<div class="site-branding">
-			<?php $logo = get_field('logo_dv','option'); ?>
+			<?php // $logo = get_field('logo_dv','option'); ?>
 			<div class="site-logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="">
-					<img src="<?php echo $logo['url']; ?>" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
+					<img src="<?php// echo $logo['url']; ?>" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
 				</a>
 			</div>
 		</div>
@@ -88,7 +88,6 @@ if ( ! function_exists( 'pho_primary_navigation' ) ) {
 			?>
 			<nav class="main-nav" id="nav">
 				<?php
-				if ( has_nav_menu( 'primary' ) ) {
 					wp_nav_menu( array(
 						'theme_location' => 'primary',
 						'container' => '',
@@ -97,9 +96,7 @@ if ( ! function_exists( 'pho_primary_navigation' ) ) {
 						'menu_id'         => 'main-navigation',
 						'menu_class'        => 'menu-list',
 					) );
-				}else{
-
-				}
+				
 				?>
 			</nav>
 			<?php
@@ -111,11 +108,11 @@ if ( ! function_exists( 'pho_social_icons' ) ) {
 		?>
 		<div class="social_icons">
 			<ul>
-				<li><a href="<?php the_field('youtube','option'); ?>"><i class="fab fa-youtube"></i></a></li>
-				<li><a href="<?php the_field('twitter','option'); ?>"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="<?php the_field('facebook','option'); ?>"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="<?php the_field('pinterest','option'); ?>"><i class="fab fa-pinterest"></i></a></li>
-				<li><a href="<?php the_field('instagram','option'); ?>"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="<?php //the_field('youtube','option'); ?>"><i class="fab fa-youtube"></i></a></li>
+				<li><a href="<?php //the_field('twitter','option'); ?>"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="<?php //the_field('facebook','option'); ?>"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="<?php //the_field('pinterest','option'); ?>"><i class="fab fa-pinterest"></i></a></li>
+				<li><a href="<?php //the_field('instagram','option'); ?>"><i class="fab fa-instagram"></i></a></li>
 			</ul>
 		</div>
 	<?php }
