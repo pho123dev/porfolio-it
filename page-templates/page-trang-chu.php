@@ -8,5 +8,9 @@
  ?>
 
  <?php get_template_part( 'sections/about' ); ?>
+ <?php get_template_part( 'sections/product' ); ?>
+ <?php get_template_part( 'sections/news' ); ?>
+ <?php get_template_part( 'sections/contact' ); ?>
+ <?php get_template_part( 'sections/info-contact' ); ?>
 
  <?php get_footer(); ?>

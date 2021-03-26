@@ -15,7 +15,7 @@
 </head>
 <body <?php body_class(); ?>>
   <header class="header" id="header">
-    <div class="header-main sticky-header">
+    <div class="header-main">
       <div class="container">
         <div class="navbar-container-inner clearfix">
           <div class="site-branding">
@@ -40,7 +40,7 @@
       </div>
     </div>
   </header>
-  <header id="header-content-mobile" class="clearfix sticky-header">
+  <header id="header-content-mobile" class="clearfix">
     <div class="site-branding">
       <div class="site-logo">
 

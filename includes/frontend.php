@@ -3,24 +3,6 @@
 function class_slide($sl) {
 	echo "hero-slider slider-{$sl} owl-carousel owl-loaded owl-drag";
 } 
-function title_section_arr( $arr, $echo = 1) {
-	$arr = shortcode_atts( array( 
-		'title' => '',
-		'content' => ''
-	), $arr );
-	extract($arr);
-	?>
-	<div class="title-arr">
-		<div class="title-arr-2"><?php echo $title; ?></div>
-		<p><?php echo $content; ?></p>
-	</div>
-	<?php
-	return $echo;
-}
-// title_section_arr(array(
-// 	'title' => '',
-// 	'content' => '',
-// ));
 function style_background($url){
 	echo "
 	style='background: url($url);
@@ -39,6 +21,11 @@ function style_before($class,$url){
 		position: relative;
 	}
 	.$class:before {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-repeat: no-repeat;
+		content:'';
 		background-image: url($url);
 	}
 	</style>
@@ -72,26 +59,21 @@ function search_popup(){
 	</div>
 	<?php
 }
-function why_item($icon,$title,$content){
-	?>
-	<div class="_item right row-grid-2">
-		<div class="_left">
-			<div class="_icon">
-				<img src="<?php echo $icon['url']; ?>" alt="icon">
-			</div>
-		</div>
-		<div class="_right">
-			<div class="_title">
-				<?php echo $title; ?>
-			</div>
-			<div class="_content">
-				<?php echo $content; ?>
-			</div>
-		</div>
-	</div>
-	<?php 
-}
 
+function title_section_arr( $arr, $echo = 1) {
+	$arr = shortcode_atts( array( 
+		'title' => '',
+		'sub_title' => ''
+	), $arr );
+	extract($arr);
+	?>
+	<div class="title-section">
+		<div class="_title"><?php echo $title; ?></div>	
+		<p class="_sub_title"><?php echo $sub_title; ?></p>
+	</div>
+	<?php
+	return $echo;
+}
 function testimonials_item($testimonials){
 	if (have_rows($testimonials)) {
 		while (have_rows($testimonials)) {

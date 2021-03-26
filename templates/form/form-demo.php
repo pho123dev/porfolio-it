@@ -1,21 +1,16 @@
-<div class="col-form-contact">
-	<?php if ( is_page_template('page-templates/home-page.php') ) { ?>
-	<div class="_title-form">
-		<h3>Tạo một</h3>
-		<h2>Cuộc hẹn</h2>
-	</div>
-	<?php } ?>
-	<form class="dt-sc-subscribe-frm" name="frmsubscribe" action="#" method="post">
+<div class="FromContact">
+	<div class="title-from">From liên hệ</div>
+	<form class="ClassFrom" name="NameForm" id="IdForm" action="#" method="post">
 		<div class="_top">
-			<input type="text" name="username" placeholder="Họ tên" required="">
-			<input type="email" name="email" placeholder="Email" required="">
+			<input type="text" name="username" placeholder="Họ Và Tên:" required="">
 		</div>
 		<div class="_content">
-			<input type="text" name="phone" placeholder="Phone" required="">
-			<textarea name="message" placeholder="Nội dung"></textarea>
+			<input type="text" name="phone" placeholder="Số Điện Thoại:" required="">
+			<input type="email" name="mail" placeholder="Mail:" required="">
 		</div>
 		<div class="_bottom">
-			<input class="btn_submit" type="submit" name="mc_submit" value="Gửi đi">
+			<textarea name="message" placeholder="Nội dung:"></textarea>
 		</div>
+		<input class="btn-form _btn" id="IdSubmit" type="submit" name="NameSubmit" value="Gửi ngay">
 	</form>
 </div>

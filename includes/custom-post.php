@@ -1,47 +1,23 @@
 <?php 
 // post
-function post($class){
+function product(){
 	?>
-	<div class="item-news">
-		<div class="_img-news">
-			<a href="<?php the_permalink(); ?>">
-				<img src="<?php getTheFirstImages();?>" alt="image">
-			</a>
+	<div class="_item_product">
+		<div class="_item_image">
+			<a href="<?php the_permalink(); ?>"><img src="<?php getTheFirstImages();?>" alt="image"></a>
 		</div>
-		<div class="_content-news">
-			<div class="_date"><i class="fas fa-calendar-alt"></i><?php echo get_the_date("d/m/y");?></div>
-			<div class="_title"><h4><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 16, '...' ); ?></a></h4></div>
+	</div>
+<?php }
+function post(){
+	?>
+	<div class="_item_post">
+		<div class="_item_image">
+			<a href="<?php the_permalink(); ?>"><img src="<?php getTheFirstImages();?>" alt="image"></a>
+		</div>
+		<div class="_content">
+			<div class="_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 			<div class="_des"><p><?php excerpt_str(); ?></p></div>
-			<div class="_read_more"><a href="<?php the_permalink(); ?>">Đọc tiếp →</a></div>
-		</div>
-	</div>
-<?php }
-function post_bar($class){
-	?>
-	<div class="item-news <?php echo $class; ?>">
-		<div class="_img-news">
-			<a href="<?php the_permalink(); ?>">
-				<img src="<?php getTheFirstImages();?>" alt="<?php the_post_thumbnail_url();?>">
-			</a>
-		</div>
-		<div class="_content-news">
-			<div class="_title"><h4><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 16, '...' ); ?></a></h4></div>
-			<div class="_meta">
-				<span class="_date"><?php echo get_the_date("F j, Y");?></span> 
-			</div>
-		</div>
-	</div>
-<?php }
-function post_absolute($class){
-	?>
-	<div class="item-news <?php echo $class; ?>">
-		<div class="_img-news">
-			<a href="<?php the_permalink(); ?>">
-				<img src="<?php getTheFirstImages();?>" alt="<?php the_post_thumbnail_url();?>">
-			</a>
-		</div>
-		<div class="_content-news">
-			<div class="_title"><h4><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 16, '...' ); ?></a></h4></div>
+			<div class="_read_mord"><a href="<?php the_permalink(); ?>">Xem thêm..</a></div>
 		</div>
 	</div>
 <?php }
