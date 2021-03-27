@@ -74,26 +74,3 @@ function title_section_arr( $arr, $echo = 1) {
 	<?php
 	return $echo;
 }
-function testimonials_item($testimonials){
-	if (have_rows($testimonials)) {
-		while (have_rows($testimonials)) {
-			the_row();
-			$image = get_sub_field('image');
-			$title = get_sub_field('title');
-			$position = get_sub_field('position');
-			$describe = get_sub_field('content');
-			?>
-			<div class="_item_testimonial">
-				<div class="_image_testimonial_asu">
-					<div class="_image_testimonial"><img src="<?php echo $image['url']; ?>" alt="image"></div>
-				</div>
-				<div class="_content_testimonial">
-					<div class="_position"><?php echo $position; ?></div>
-					<div class="_title"><?php echo $title; ?></div>
-					<div class="_describe"><?php echo $describe; ?></div>
-				</div>
-			</div>
-			<?php
-		}
-	} 
-}

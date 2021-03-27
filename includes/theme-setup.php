@@ -17,6 +17,7 @@ if (!function_exists('pho_setup')) {
 		//add_image_size( 'banner', $width = 1500, $height = 0, $crop = false );
 		// khai báo menu 
 		register_nav_menu( 'primary',__('Primary menu','pho') );
+		register_nav_menu( 'menu_footer',__('Footer menu','pho') );
 
 		// đăng kí 1 side bar 
 		$copyright=array( 'name'=>__('Copyright','pho'), 'id' =>'copyright', ); register_sidebar( $copyright );

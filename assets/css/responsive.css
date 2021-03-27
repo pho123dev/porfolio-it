@@ -10,13 +10,14 @@
 	.container { width: 970px }
 }
 @media (min-width:1200px) {
-	.container { width: 1110px }
+	.container { width: 1200px }
 }
 @media (min-width:1300px) {
 	.container { max-width: 1920px; }
 }
 .container-full {
-    width: 100%;
+    width: 1920px;
+    margin: auto;
 }
 @media (min-width:768px) { }
 @media (min-width:992px) { }
