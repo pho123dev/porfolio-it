@@ -16,13 +16,19 @@
 						<div class="title-footer boder-footer"><h3>VỀ TEAM IT</h3></div>
 						<?php get_menu_custom('menu_footer','menu_footer','menu_footer'); ?>
 						<div class="title-footer boder-footer"><h3>KẾT NỐI VỚI CHÚNG TÔI</h3></div>
-						<div class="social">
-							<ul>
-								<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href=""><img src="./wp-content/themes/theme-porfolio/assets/images/Layer171.png" alt="image"></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
+						<?php if (have_rows('social','option')) {
+							the_row();
+							$zalo_icon = get_sub_field('zalo_icon');
+							?>
+							<div class="social">
+								<ul>
+									<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href=""><img src="<?php echo $zalo_icon['url']; ?>" alt="image"></a></li>
+									<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+								</ul>
+							</div>
+							<?php
+						} ?>
 					</div>
 					<div class="_item_footer">
 						<div class="title-footer"><h3>ĐĂNG KÍ NHẬN TIN</h3></div>
@@ -40,11 +46,11 @@
 	</div>
 </footer>
 <?php do_action( 'pho_after_footer' ); ?>
-<div class="m-backtotop" aria-hidden="true">
+<!-- <div class="m-backtotop" aria-hidden="true">
 	<div class="text">
-		<span class=" iconmoon-house relative" id="btn-vibrate"></span><span><img src="<?php echo THEME_URL_IMG ?>backtoptop.png"></span>
+		<span class=" iconmoon-house relative" id="btn-vibrate"></span><span><img src="<?php //echo THEME_URL_IMG ?>backtoptop.png"></span>
 	</div>
-</div>
+</div> -->
 <?php wp_footer(); ?>
 </body>
 </html>

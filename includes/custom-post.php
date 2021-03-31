@@ -21,6 +21,26 @@ function post(){
 		</div>
 	</div>
 <?php }
+function number($image,$title,$position){
+	?>
+	<div class="item">
+		<div class="image">
+			<a href=""><img src="<?php echo $image['url']; ?>" alt=""></a>
+			<div class="hover">
+				<div class="social">
+					<ul>
+						<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href=""><img src="http://localhost/porfolio/wp-content/uploads/2021/03/Layer171.png" alt="image"></a></li>
+						<li><a href=""><i class="fab fa-youtube"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="title"><h4><a href=""><?php echo $title; ?></a></h4></div>
+		<div class="position"><?php echo $position; ?></div>
+	</div>
+	<?php
+}
 // loop
 function category_posts($class) {
 	if (have_posts()) :

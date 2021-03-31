@@ -113,6 +113,7 @@ ul li { padding: 0; }
 .fa-phone-alt:before { content: "\f879" }
 .fa-envelope:before { content: "\f0e0" }
 .fa-play-circle:before { content: "\f144" }
+.fa-tiktok:before { content: "\e07b" }
 .fa-share-alt:before { content: "\f1e0"; font-family: 'Font Awesome 5 Free'; font-weight: 900 }
 .fa-google-plus:before, .fa-google:before { content: "\f1a0"; font-family: 'Font Awesome 5 Brands'; font-weight: 400 }
 .owl-carousel, .owl-carousel .owl-item { -webkit-tap-highlight-color: transparent; position: relative }
@@ -184,7 +185,7 @@ header#header .navbar-container-inner { grid-template-columns: 15% 85%; }
 #header #main-nav-tool>li, #header #main-navigation>li { list-style: none; display: inline-block; height: 71px; position: relative; line-height: 71px; }
 #header #main-nav-tool { margin: 0 0 0 20px }
 #header #main-nav-tool>li+li, #header #main-navigation>li+li { margin-left: 15px }
-#header #main-navigation>li>a { padding: 0 10px; font-weight: 400; color: var(--text-color); font-size: 18px; text-transform: initial; }
+#header #main-navigation>li>a { padding: 0 10px; font-weight: 400; color: var(--text-color); font-size: 13.79pt; text-transform: initial; }
 #header #main-navigation>li.current-menu-item>a, #header #main-navigation>li>a:focus, #header #main-navigation>li>a:hover { color: var(--secondary-color); text-decoration: none }
 .header-button span { padding: 12px 22px; border: 1px solid var(--secondary-color); color: var(--secondary-color) }
 #main-nav-mobile .header-button a { padding-right: 10px }
