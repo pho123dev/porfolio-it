@@ -21,6 +21,22 @@ function post(){
 		</div>
 	</div>
 <?php }
+function post_bar(){
+	?>
+	<div class="bar item-news row-grid-2">
+		<div class="image">
+			<a href="<?php the_permalink(); ?>">
+				<img src="<?php getTheFirstImages();?>" alt="<?php the_post_thumbnail_url();?>">
+			</a>
+		</div>
+		<div class="content">
+			<div class="title"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></div>
+			<div class="meta">
+				<span class="date"><?php echo get_the_date("F j, Y");?></span> 
+			</div>
+		</div>
+	</div>
+<?php }
 function number($image,$title,$position){
 	?>
 	<div class="item">
@@ -91,17 +107,8 @@ function loop_single_related_post($sl,$class) {
 		$my_query = new wp_query($args);
 		if( $my_query->have_posts() ) { 
 			while ($my_query->have_posts()) { $my_query->the_post();
-				echo post($class);
+				echo post();
 			}
 		}
 	}
 }
-function pho_related_post($data){
-	?>
-	<div class="pho_related_post">
-		<h3><?php echo $data; ?></h3>
-		<div class="related_post">
-			<?php loop_single_related_post(2,''); ?>
-		</div>
-	</div>
-<?php }

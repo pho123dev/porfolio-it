@@ -260,7 +260,7 @@ ul.navigation-mobile>li:hover>a, ul.navigation-mobile>li>a:hover { background-co
 .popup-search-form .search-close span::after, .off-canvas-close span::after { content: ""; position: absolute; top: 10px; left: 0; background: #ddd; transform: rotate(45deg); width: 40px; height: 2px }
 input.search-global__input:focus { outline: none }
 .popup-search-form input[type="submit"] { display: none }
-input.search-global__input { font-size: 65px; width: auto; height: auto; border: none }
+input.search-global__input { font-size: 65px; width: 100%; height: auto; border: none }
 input.search-global__input::placeholder { color: #fff }
 @media only screen and (max-width:1024px) {
 	header .menu_header .menu_title { padding: 0 15px; line-height: 35px; text-transform: capitalize; font-family: SanFrancisco; font-weight: bold; font-size: 16px; border-bottom: solid 1px #f0f0f0; color: var(--primary-bg-color); }

@@ -2,7 +2,7 @@
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-thumb { background: var(--primary-color); }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
-a:hover { color: var(--secondary-color); cursor: pointer; }
+a:hover { color: var(--secondary-color) !important; cursor: pointer; }
 button:hover { cursor: pointer; }
 .text--primary { color: var(--primary-color) !important; }
 .row-grid-2 { display: grid; grid-template-columns: 1fr 1fr; }
@@ -10,6 +10,15 @@ button:hover { cursor: pointer; }
 .row-grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
 .row-grid-5 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 .row-flex { display: flex; justify-content: center; align-items: center; }
+.row-grid-layout { display: grid; grid-template-areas: 'left right' 'bottom bottom'; }
+.row-grid-layout>.left { grid-area: left; }
+.row-grid-layout>.right { grid-area: right; }
+.row-grid-layout>.bottom { grid-area: bottom; }
+._des {
+    height: 45px;
+    overflow: hidden;
+    width: 98%;
+}
 .slider .owl-dots .owl-dot:hover, .slider .owl-dots .owl-dot.active { background: var(--primary-color); }
 .slider .owl-dots .owl-dot { cursor: pointer; display: inline-block; line-height: 12px; margin: 0 5px; position: relative; text-indent: -9999px; -webkit-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s; background: #e8e8e8; width: 12px; height: 12px; border-radius: 50%; }
 .slider .owl-dots { bottom: 115px; padding: 0; position: absolute; width: 100%; z-index: 10; bottom: 10%; }
@@ -23,12 +32,11 @@ button:hover { cursor: pointer; }
 .m-backtotop.active { transform: initial; border-radius: 50%; background: transparent; color: transparent; box-shadow: none; }
 .m-backtotop > div.text span { font-size: 12px; text-transform: uppercase; font-weight: 600; position: relative; }
 .m-backtotop > div.text span img { height: 30px; border-radius: 5px; }
-form input, form textarea,form input::placeholder, form textarea::placeholder {
-    font-size: 11.25pt;
-}
+form input, form textarea, form input::placeholder, form textarea::placeholder { font-size: 11.25pt; }
 .position { font-size: 17.25pt; }
-section.news,section.contact { font-size: 12pt; }
+section.news, section.contact { font-size: 12pt; }
 section.news a { font-size: 12.75pt; }
+
 /*about*/
 .title-section ._title { font-size: 37.5pt; font-weight: bold; letter-spacing: 5px; margin-bottom: 10px; }
 .title-section ._sub_title { font-size: 22.5pt; color: var(--secondary-color); letter-spacing: 3px; }
@@ -42,13 +50,13 @@ section.about .item-left .item-about { display: grid; grid-template-columns: 1fr
 section.about .item-left .item-about ._number { font-size: 71.4pt; line-height: 1; font-family: 'Louis-George-Cafe'; position: relative; }
 section.about .item-left .item-about ._number:after { content: ""; border-bottom: 1px solid #5a5a5ac4; position: absolute; height: 1px; width: 95%; left: 5px; bottom: -4px; }
 section.about .item-left .item-about ._title { font-size: 22.01pt; text-transform: uppercase; letter-spacing: 3px; width: 100px; height: 200px; position: relative; }
-section.about .item-left .item-about ._title ._rotate { transform: rotate(-90deg); position: absolute; width: 200px; height: 100px; line-height: 130px; top: 50px; left: -30px; }
+section.about .item-left .item-about ._title ._rotate {text-align: center; transform: rotate(-90deg); position: absolute; width: 200px; height: 100px; line-height: 130px; top: 50px; left: -30px; }
 section.about .item-right .item-about ._top { margin-top: 50px; margin-bottom: 180px; }
 section.about .item-right .item-about ._top ._title { font-weight: bold; font-size: 50px; }
 section.about .item-right .item-about ._top ._title ._text_1 { display: block; margin-bottom: 30px; letter-spacing: 5px; }
 section.about .item-right .item-about ._top ._title ._text_2 { text-transform: uppercase; margin-bottom: 25px; padding-left: 85px; letter-spacing: 5px; }
 section.about .item-right .item-about ._top ._sub_title { color: var(--secondary-color); font-size: 15pt; margin-bottom: 60px; padding-left: 85px; letter-spacing: 2px; }
-section.about .item-left .item-about ._title:before { position: absolute; background: var(--secondary-color); content: ""; height: 100%; width: 27px; left: 60px; top: 7px; }
+section.about .item-left .item-about ._title:before { position: absolute; background: var(--secondary-color); content: ""; height: 100%; width: 27px; left: 60px; }
 section.about .item-right .item-about ._bottom ._content ul li { list-style: inside; line-height: 2; }
 section.about .item-right .item-about ._bottom ._content { font-size: 15pt; padding-left: 94px; }
 section.about .item-right .item-about ._bottom ._content p { line-height: 1.8; margin-bottom: 25px; }
@@ -105,7 +113,7 @@ section.info_contact .item-left { display: flex; align-items: center; justify-co
 .col-info_contact { position: relative; }
 ._bottom-hover { position: absolute; top: 0; right: 0; width: 100%; }
 .col-info_contact ._bottom { position: relative; z-index: 1; }
-.form_info_contact ul li {     font-size: 11.25pt;display: grid; grid-template-columns: 1fr 3fr 8fr; text-align: left; gap: 30px; margin-bottom: 20px; }
+.form_info_contact ul li { font-size: 11.25pt; display: grid; grid-template-columns: 1fr 3fr 8fr; text-align: left; gap: 30px; margin-bottom: 20px; }
 .form_info_contact ul li i, .form_info_contact ul li a { color: var(--secondary-color); }
 .form_info_contact ul li i { font-size: 20px; }
 .form_info_contact ul { margin-top: 50px; }
@@ -150,10 +158,62 @@ section.about.about-page .row-grid-2 { gap: 195px; }
 .slider-number .image .hover .social ul li:last-child { margin-right: 0; }
 .slider-number .image .hover .social ul li { margin-right: 0; margin-bottom: 10px; }
 .slider-number .title h4 { margin-top: 25px; }
-section.number ._top .title-section { padding-left: 300px;     margin-bottom: 40px;}
-section.number {
-       margin: 100px 0;
+section.number ._top .title-section { padding-left: 300px; margin-bottom: 40px; }
+section.number { margin: 100px 0; }
+section.about.about-page.ky-nang-page .item-right .item-about ._bottom ._content { padding-left: 100px; }
+
+/*archive*/
+.archive 
+section.product { margin: 70px auto 0 0; }
+
+/*category*/
+.list_post.row-grid-3 { gap: 25px; }
+section.news-category { margin-top: 60px; }
+.ereaders-pagination, .ereaders-pagination > ul { float: left; width: 100%; }
+.ereaders-pagination { margin: 50px 0 30px; text-align: center; }
+.ereaders-pagination > ul > li { display: inline-block; list-style: none; margin: 0 17px 10px 0; vertical-align: middle; }
+.ereaders-pagination > ul > li > .previous span i { display: inline-block; }
+.ereaders-pagination > ul > li > .previous, .ereaders-pagination > ul > li > .next { line-height: 1; padding: 12px 0px 0px; }
+.ereaders-pagination > ul > li > a, .ereaders-pagination > ul > li > span { color: #fff; font-size: 14px; float: left; height: 40px; line-height: 2.4; padding: 3px 0px 0px; width: 40px; background-color: #111111; border-radius: 3px; font-weight: bold; }
+.ereaders-pagination > ul > li > .prev span i { transform: rotate(0deg); display: inline-block; }
+.page-numbers.current { background: var(--secondary-color); color: #fff; }
+.item-about.top h1 { font-size: 15.16pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+.tags a { background: #6b6a6a; display: inline-block; color: #fff; font-size: 11.37pt; height: 34px; line-height: 34px; padding: 0 15px; margin-right: 10px; margin-bottom: 10px; }
+.tags a:hover { background: var(--secondary-color); color: #fff !important; }
+.widget-title>h3 { font-size: 13.64pt; text-transform: uppercase; }
+._single .row-grid-layout { grid-template-areas: 'left left left left left left left left right right right right'
+'bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom'; gap: 30px; }
+._single section.about.about-page .row-grid-2 { gap: 100px; }
+input.search-global__input { border-top: 1px solid; border-bottom: 1px solid; border-color: #5a5a5aed; padding: 13px 20px; font-size: 14px; width: 100%; }
+form.search-button button { display: none; }
+.sidebar .widget { margin-bottom: 20px; }
+.bar.item-news.row-grid-2 { grid-template-columns: 6fr 16fr; margin-bottom: 20px; border-bottom: 1px solid; border-color: #5a5a5aed; padding-bottom: 20px; gap: 15px; }
+.bar.item-news.row-grid-2 .content .title h4 a { font-size: 10.61pt; font-weight: 400; line-height: 1.1; color: #ffff; }
+.bar.item-news.row-grid-2 .content .title h4 a:hover { color: var(--secondary-color); }
+.bar.item-news.row-grid-2 .image { height: 86px; }
+.bar.item-news.row-grid-2:last-child { border: none; }
+.main .top .item-right ._bottom ._content .image { height: 300px; }
+.image img { width: 100%; height: 100%; object-fit: cover; }
+._single .sidebar { margin-top: 223px; }
+._single .main .content { font-size: 12.13pt; margin-top: 50px; }
+._single .main .content p { line-height: 1.7; }
+.related-post { padding-top: 40px; }
+.related-post>h3 { font-weight: bold; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
+.related-post ._des { display: none; }
+.related-post ._read_mord { display: none; }
+.related-post ._title a { font-size: 13.64pt; font-weight: 400; }
+.related-post .row-grid-3 { gap: 30px; }
+.related-post ._item_image { height: 234px; }
+._single { margin-bottom: 50px; }
+.item-about.top .meta { margin-bottom: 40px; }
+.item-about.top h1 { margin-bottom: 5px; }
+._single ._content {
+    margin-top: 30px;
 }
-section.about.about-page.ky-nang-page .item-right .item-about ._bottom ._content {
-    padding-left: 100px;
+.map ._iframe {
+    height: 485px;
+    margin-bottom: 100px;
+}
+.map .title-section {
+    margin-bottom: 40px;
 }

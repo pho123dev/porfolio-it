@@ -32,7 +32,7 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</div> 
 						<div class="item-about bottom">
 							<div class="_bottom">
 								

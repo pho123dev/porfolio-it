@@ -1,10 +1,13 @@
 <?php 
-function check_tyle($type,$item_1,$itemt_2){
-    if(!$type == null && $type == $item_1){
+function check_tyle($type,$item_1,$itemt_2,$select,$itemt_3){
+    if(!$select == null && $select == $itemt_3){
+       echo post_bar();
+   }
+    elseif(!$type == null && $type == $item_1){
         echo product();
     } elseif(!$type == null && $type == $itemt_2){
-     echo post('');
- }
+       echo post();
+   }
 }
 add_shortcode( 'list-posts', 'rmcc_post_listing_parameters_shortcode' );
 function rmcc_post_listing_parameters_shortcode( $atts ) {
@@ -32,22 +35,22 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
                 )
             );
         } else {
-           $args = array( 
+         $args = array( 
             'post_type' => $type,
             'posts_per_page' => $posts,
             'offset'      => $offset,
         );
-       }
-       $loop = new WP_Query( $args );
-       while ($loop->have_posts()) { $loop->the_post();
-        check_tyle($type,'san-pham','post');
+     }
+     $loop = new WP_Query( $args );
+     while ($loop->have_posts()) { $loop->the_post();
+        check_tyle($type,'san-pham','post',$select,'bar');
 
     }
 } else {
-   if (have_posts()) :
+ if (have_posts()) :
     while (have_posts()) : the_post();
-       check_tyle($type,'san-pham','post');
-   endwhile; else :
+     check_tyle($type,'san-pham','post',$select,'bar');
+ endwhile; else :
 endif;
 }
 }

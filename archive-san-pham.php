@@ -34,6 +34,15 @@
 <section class="product">
 	<div class="list_product row-grid-5">
 		<?php echo do_shortcode( '[list-posts type="san-pham" posts="" taxonomy="" terms="" offset="" select=""]' ); ?>
+		<?php
+		pagination(array(
+			'class_div' => 'ereaders-pagination',
+			'class_ul' => 'page-numbers',
+			'class_li' => 'revious page-numbers',
+			'prev_text' => '<span aria-label="Prev"><i class="fas fa-chevron-left"></i></span>',
+			'next_text' => '<span aria-label="Next"><i class="fas fa-chevron-right"></i></span>'
+		));
+		?>
 	</div>
 </section>
 <?php get_footer(); ?>
