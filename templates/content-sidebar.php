@@ -1,4 +1,3 @@
-<?php $page_id = get_option('page_on_front'); ?>
 <aside class="sidebar default-sidebarcustom-sidebar">
 	<div class="widget widget_search">
 		<?php search_button(); ?>

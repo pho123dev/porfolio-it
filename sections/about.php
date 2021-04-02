@@ -14,7 +14,14 @@
 							<div class="_top">
 								<div class="_title">
 									<div class="_text_1">Xin chào,</div>
-									<div class="_text_2">chúng tôi là đội ngũ it</div>
+									<?php $str = 'chúng tôi là đội ngũ it'; ?>
+									<?php $char_list = explode(' ', $str); ?>
+									<div class="_text_2">
+										<?php $i=0; foreach ($char_list as $item) { $i++;?>
+											<span class="item item-<?php echo $i; ?>"><?php echo $item; ?></span>
+										<?php } ?>
+									</div>
+
 								</div>
 								<div class="_sub_title">Làm việc tại DIVA MEDIA</div>
 								<div class="_btn"><a href="/gioi-thieu">Xem thêm về chúng tôi</a></div>

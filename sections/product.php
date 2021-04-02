@@ -29,6 +29,6 @@
 		</div>
 	</div>
 	<div class="list_product row-grid-5">
-		<?php echo do_shortcode( '[list-posts type="san-pham" posts="10" taxonomy="san-pham-cat" terms="san-pham" offset="" select=""]' ); ?>
+		<?php echo do_shortcode( '[list-posts type="san-pham" posts="10" taxonomy="" terms="" offset="" select=""]' ); ?>
 	</div>
 </section>

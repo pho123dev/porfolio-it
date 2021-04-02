@@ -49,7 +49,7 @@ function style_before($class,$url){
 function search_button(){
 	?>
 	<form class="search-button" method="get" action="/">
-		<input type="text" placeholder="Nhập từ khóa tìm kiếm..." autocomplete="off" name="s" value="" class="search-global__input"/>
+		<input type="text" placeholder="Tìm kiếm..." autocomplete="off" name="s" value="" class="search-global__input"/>
 		<button type="submit" value=""><i class="fa fa-search"></i></button>
 	</form>
 	<?php

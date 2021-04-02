@@ -34,7 +34,6 @@ function catch_that_image() {
   ob_end_clean();
   $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
   $first_img = $matches[1][0];
-
   if(empty($first_img)) {
     $first_img = "/path/to/default.png";
 }
@@ -61,7 +60,6 @@ function check_mobile() {
         $is_mobile=0;
     return $is_mobile;
 }
-
 // phân trang
 function pagination( $arr, $echo = 1) {
     $arr = shortcode_atts( array( 
@@ -177,5 +175,4 @@ if (!function_exists('pho_breadcrumbs')){
         }
     }
 }
-
 

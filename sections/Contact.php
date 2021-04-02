@@ -1,4 +1,4 @@
-<section class="contact">
+<section class="contact contacttop">
 	<div class="bg-contact">
 		<div class="container">
 			<div class="col-contact">
@@ -16,6 +16,14 @@
 						<div class="_right"></div>	
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="contact contactbottom">
+	<div class="bg-contact">
+		<div class="container">
+			<div class="col-contact">
 				<div class="_bottom">
 					<div class="row-grid-2">
 						<div class="item-left">

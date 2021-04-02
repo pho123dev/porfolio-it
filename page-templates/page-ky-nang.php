@@ -34,8 +34,31 @@
 							</div>
 						</div> 
 						<div class="item-about bottom">
-							<div class="_bottom">
-								
+							<div class="skills">
+								<div class="skill">
+									<div class="skill-name">Front-end</div>
+									<div class="skill-bar">
+										<div class="skill-per" per="95"></div>
+									</div>
+								</div>
+								<div class="skill">
+									<div class="skill-name">Back-end</div>
+									<div class="skill-bar">
+										<div class="skill-per" per="75"></div>
+									</div>
+								</div>
+								<div class="skill">
+									<div class="skill-name">ReactJS</div>
+									<div class="skill-bar">
+										<div class="skill-per" per="60"></div>
+									</div>
+								</div>
+								<div class="skill">
+									<div class="skill-name">Angular</div>
+									<div class="skill-bar">
+										<div class="skill-per" per="50"></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -43,5 +66,6 @@
 			</div>
 		</div>
 	</div>
+</div>
 </section>
 <?php get_footer(); ?>

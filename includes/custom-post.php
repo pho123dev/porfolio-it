@@ -1,18 +1,18 @@
 <?php 
-// post
 function product(){
 	?>
 	<div class="_item_product">
-		<div class="_item_image">
+		<div class="_item_image zoom">
 			<a href="<?php the_permalink(); ?>"><img src="<?php getTheFirstImages();?>" alt="image"></a>
 		</div>
+		<div class="hover"><a href="<?php the_permalink(); ?>">Xem <br>sản phẩm</a></div>
 	</div>
 <?php }
 function post(){
 	?>
 	<div class="_item_post">
 		<div class="_item_image">
-			<a href="<?php the_permalink(); ?>"><img src="<?php getTheFirstImages();?>" alt="image"></a>
+			<a class="zoom" href="<?php the_permalink(); ?>"><img src="<?php getTheFirstImages();?>" alt="image"></a>
 		</div>
 		<div class="_content">
 			<div class="_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>

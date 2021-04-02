@@ -23,6 +23,9 @@ get_header();
 									'sub_title'	=> 	'TEAM IT',
 								)); ?>
 								<div class="_content">
+									<div class="LineGraph">
+										<canvas id="myChart"></canvas>
+									</div>
 									<p>Với gần 10 năm kinh nghiệm, đã hoàn thành 500 website trên nhiều lĩnh
 										vực khác nhau, Team It tự tin đáp ứng toàn bộ nhu cầu của khách hàng,
 									có thể tư vấn toàn bộ thông tin, thi công toàn bộ yêu cầu của quý khách.</p>
@@ -84,3 +87,25 @@ get_header();
 	<?php
 } ?>
 <?php get_footer();?>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+	var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['2013','2014', '2015','2016','2017', '2019','2020', '2021'],
+        datasets: [{
+            label: 'Dự án',
+            backgroundColor: '#282828',
+            borderColor: '#f16b4e',
+            data: [0, 70, 130, 160, 200, 210, 220, 250]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>

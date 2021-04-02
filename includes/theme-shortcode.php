@@ -46,6 +46,7 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
         check_tyle($type,'san-pham','post',$select,'bar');
 
     }
+    wp_reset_postdata();
 } else {
  if (have_posts()) :
     while (have_posts()) : the_post();
