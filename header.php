@@ -20,7 +20,9 @@
         <div class="navbar-container-inner clearfix">
           <div class="site-branding">
             <div class="site-logo">
-
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/images/logoNTA.png" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
+              </a>
             </div>
           </div>
           <nav class="main-nav" id="nav">
@@ -43,25 +45,23 @@
   <header id="header-content-mobile" class="clearfix">
     <div class="site-branding">
       <div class="site-logo">
-
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/images/logoNTA.png" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
+        </a>
       </div>
     </div>
     <div class="navbar-container-inner clearfix">
       <div class="header-mobile-tools">
         <a title="<?php esc_attr_e('Menu', 'pho') ?>" href="#" id="hamburger-icon" class="">
-          <span class="hamburger-icon-inner">
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
-          </span>
+          <i class="gg-menu"></i>
         </a>
       </div>
       <?php $items_wrap = '';
       printf(
         '<nav id="main-nav-mobile" class="main-nav-mobile">
-      <div class="menu_header"><div class="menu_title"><i class="fas fa-bars"></i></div><div class="menu_close"><i class="fa fa-times" ></i></div></div>
-      <ul class="menu navigation-mobile">%s</ul>
-      </nav><div class="menu_overlay"></div>',
+        <div class="menu_header"><div class="menu_title"><i class="fas fa-bars"></i></div><div class="menu_close"><i class="fa fa-times" ></i></div></div>
+        <ul class="menu navigation-mobile">%s</ul>
+        </nav><div class="menu_overlay"></div>',
         $items_wrap
       ); ?>
     </div>
