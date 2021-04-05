@@ -214,7 +214,7 @@ form.search-button button { display: none; }
 ._item_product { position: relative; opacity: 0.5; overflow: hidden; }
 ._item_product:hover .hover { visibility: visible; opacity: 1; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--secondary-color); text-align: center; border-radius: 50%; }
 ._item_product .hover a { color: #282828 !important; height: 100px; width: 100px; display: flex; align-items: center; justify-content: center; line-height: 1.5; }
-._item_product:hover { opacity: 1; }	
+._item_product:hover { opacity: 1; }
 ._item_image { overflow: hidden; }
 ._item_image:hover a:after { content: ""; background: #fff; opacity: 0.5; position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
 ._read_mord a:hover { color: #ea7c64 !important; }
@@ -223,7 +223,7 @@ form.search-button button { display: none; }
 .skills { width: 100%; max-width: 600px; padding: 0 20px; margin-bottom: 100px; }
 .skill-name { font-size: 15.16pt; font-weight: 400; margin: 20px 0; }
 .skill-bar { height: 2px; background: #cacaca; border-radius: 8px; }
-.skill-per { height: 2px; background-color:var(--secondary-color); border-radius: 8px; width: 0; position: relative; transition: 2s linear; }
+.skill-per { height: 2px; background-color: var(--secondary-color); border-radius: 8px; width: 0; position: relative; transition: 2s linear; }
 .skill-per::before { content: attr(per); position: absolute; padding: 4px 6px; background-color: #000; color: #fff; font-size: 12px; border-radius: 4px; top: -35px; right: 0; transform: translateX(50%); }
 .skill-per::after { content: ""; position: absolute; width: 10px; height: 10px; background-color: #000; top: -16px; right: 0; transform: translateX(50%) rotate(45deg); border-radius: 2px; }
 .skill { margin-bottom: 40px; }
@@ -236,12 +236,6 @@ form.search-button button { display: none; }
 .LineSince ul:before { border-top: 1px solid #fff; content: ""; position: absolute; top: 0; left: 0; width: 100%; }
 .LineSince ul li:before { content: ""; border-right: 1px solid #fff; top: -3px; position: absolute; }
 .LineGraph { margin-bottom: 30px; }
-
-/**
- * ----------------------------------------
- * animation jello-vertical
- * ----------------------------------------
- */
 @-webkit-keyframes jello-vertical {
 	0% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
 	30% { -webkit-transform: scale3d(0.75, 1.25, 1); transform: scale3d(0.75, 1.25, 1); }
@@ -264,3 +258,21 @@ form.search-button button { display: none; }
 section.about .item-right .item-about ._top ._title ._text_2 span.item:hover { -webkit-animation: jello-vertical 0.9s both; animation: jello-vertical 0.9s both; color: var(--secondary-color); display: inline-block; cursor: pointer; }
 section.contact.contacttop { margin-bottom: 0; }
 section.contact.contactbottom { margin-top: 0; }
+@-webkit-keyframes slide-in-top {
+	0% { -webkit-transform: translateY(-1000px); transform: translateY(-1000px); opacity: 0; }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+@keyframes slide-in-top {
+	0% { -webkit-transform: translateY(-1000px); transform: translateY(-1000px); opacity: 0; }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+.slide-in-top-05 { -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+.slide-in-top-07 { -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+.slide-in-top-09 { -webkit-animation: slide-in-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+.slide-in-top-11 { -webkit-animation: slide-in-top 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+.slide-in-top-13 { -webkit-animation: slide-in-top 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+.slide-in-top-15 { -webkit-animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+.slide-in-top-17 { -webkit-animation: slide-in-top 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+.slide-in-top-19 { -webkit-animation: slide-in-top 1.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 1.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+._text_1.orbs span { display: inline-block; }
+._text_1.orbs ul { display: flex; }

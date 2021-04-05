@@ -1,55 +1,65 @@
-<section class="about">
-	<div class="bg-about">
-		<div class="container">
-			<div class="col-about">
-				<div class="row-grid-2">
-					<div class="item-left">
-						<div class="item-about">
-							<div class="_number">01</div>
-							<div class="_title"><div class="_rotate">Trang chủ</div></div>
-						</div>
-					</div>
-					<div class="item-right">
-						<div class="item-about">
-							<div class="_top">
-								<div class="_title">
-									<div class="_text_1">Xin chào,</div>
-									<?php $str = 'chúng tôi là đội ngũ it'; ?>
-									<?php $char_list = explode(' ', $str); ?>
-									<div class="_text_2">
-										<?php $i=0; foreach ($char_list as $item) { $i++;?>
-											<span class="item item-<?php echo $i; ?>"><?php echo $item; ?></span>
-										<?php } ?>
-									</div>
-
+<?php
+if( have_rows('about') ){
+	while( have_rows('about') ){ the_row();
+		$top = get_sub_field('top');
+		$bottom = get_sub_field('bottom');
+		$title = get_sub_field('title');
+		?>
+		<section class="about">
+			<div class="bg-about">
+				<div class="container">
+					<div class="col-about">
+						<div class="row-grid-2">
+							<div class="item-left">
+								<div class="item-about">
+									<div class="_number">01</div>
+									<div class="_title"><div class="_rotate"><?php echo $title; ?></div></div>
 								</div>
-								<div class="_sub_title">Làm việc tại DIVA MEDIA</div>
-								<div class="_btn"><a href="/gioi-thieu">Xem thêm về chúng tôi</a></div>
 							</div>
-							<div class="_bottom">
-								<?php title_section_arr(array(
-									'title'	=> 	'Kĩ năng làm việc',
-									'sub_title'	=> 	'TEAM IT',
-								)); ?>
-								<div class="_content">
-									<p>Trong gần một thập kỷ, chúng tôi có nhiều cơ hội làm việc trong môi trường
-										công nghệ web, cho phép tôi thu thập được một lượng kinh nghiệm đáng kể.
-										Làm việc cho các công ty và cá nhân trong và ngoài nước, chúng tôi đã gặp
-									và học hỏi từ những người tuyệt vời và đầy tham vọng.</p>
-									<ul>
-										<li>Thiết kế đồng hộ thương hiệu - Trang đích người dùng</li>
-										<li>Thiết kế tối ưu kết hợp giao diện người dùng UX - UI</li>
-										<li>Tối ưu SEO google  từ thẻ H1,H2,H3, thẻ ảnh,..</li>
-										<li>Hệ thống quản trị web thông minh</li>
-										<li>Tối ưu tốc độ website</li>
-									</ul>
-									<p>Bạn sẽ biết thêm về tôi với <a href="/ki-năng">kĩ năng</a> và <a href="/san-pham">sản phẩm</a></p>
+							<div class="item-right">
+								<div class="item-about">
+									<div class="_top">
+										<div class="_title">
+											<div class="_text_1 orbs">
+												<ul>
+													<li class="slide-in-top-05">X</li>
+													<li class="slide-in-top-07">i</li>
+													<li class="slide-in-top-09">n</li>
+													<li>&nbsp;</li>
+													<li class="slide-in-top-11">c</li>
+													<li class="slide-in-top-13">h</li>
+													<li class="slide-in-top-15">à</li>
+													<li class="slide-in-top-17">o</li>
+													<li class="slide-in-top-19">,</li>
+												</ul>
+											</div>
+											<?php $str = $top['title']; ?>
+											<?php $char_list = explode(' ', $str); ?>
+											<div class="_text_2">
+												<?php $i=0; foreach ($char_list as $item) { $i++;?>
+													<span class="item item-<?php echo $i; ?>"><?php echo $item; ?></span>
+												<?php } ?>
+											</div>
+										</div>
+										<div class="_sub_title"><?php echo $top['sub_title']; ?></div>
+										<div class="_btn"><a href="<?php echo $top['button_link']; ?>"><?php echo $top['button_text']; ?></a></div>
+									</div>
+									<div class="_bottom">
+										<?php title_section_arr(array(
+											'title'	=> 	$bottom['title'],
+											'sub_title'	=> 	$bottom['sub_title'],
+										)); ?>
+										<div class="_content">
+											<?php echo $bottom['content']; ?>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
+		</section>
+		<?php
+	}  
+} ?>

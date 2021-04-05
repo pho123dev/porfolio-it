@@ -1,25 +1,31 @@
-<section class="product about">
-	<div class="bg-product">
-		<?php style_before('bg-product','./wp-content/themes/theme-porfolio/assets/images/Untitled-1.jpg') ?>
-		<div class="container">
-			<div class="col-product">
-				<div class="row-grid-2">
-					<div class="item-left">
-						<div class="item-product">
-							
+<?php if (have_rows('product')) {
+	the_row();
+	$title = get_sub_field('title');
+	$sub_title = get_sub_field('sub_title');
+	$content = get_sub_field('content');
+	$background = get_sub_field('background');
+	?>
+	<section class="product about">
+		<div class="bg-product">
+			<?php style_before('bg-product',$background['url']) ?>
+			<div class="container">
+				<div class="col-product">
+					<div class="row-grid-2">
+						<div class="item-left">
+							<div class="item-product">
+
+							</div>
 						</div>
-					</div>
-					<div class="item-right">
-						<div class="item-product item-about">
-							<div class="_bottom">
-								<?php title_section_arr(array(
-									'title'	=> 	'Sản phẩm',
-									'sub_title'	=> 	'TEAM IT',
-								)); ?>
-								<div class="_content">
-									<p>Một số sản phẩm về các dự án gần đây do chúng tôi làm. Chúng tôi đã thực hiện tất cả chúng cùng với những người tuyệt vời từ các công ty trên toàn cầu.</p>
-									<p>Nó chỉ là một trong số toàn bộ danh sách mà thôi.</p>
-									<div class="_btn"><a href="/san-pham">Xem thêm sản phẩm khác</a></div>
+						<div class="item-right">
+							<div class="item-product item-about">
+								<div class="_bottom">
+									<?php title_section_arr(array(
+										'title'	=> 	$title,
+										'sub_title'	=> 	$sub_title,
+									)); ?>
+									<div class="_content">
+										<?php echo $content; ?>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -27,8 +33,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="list_product row-grid-5">
-		<?php echo do_shortcode( '[list-posts type="san-pham" posts="10" taxonomy="" terms="" offset="" select=""]' ); ?>
-	</div>
-</section>
+		<div class="list_product row-grid-5">
+			<?php echo do_shortcode( '[list-posts type="san-pham" posts="10" taxonomy="" terms="" offset="" select=""]' ); ?>
+		</div>
+	</section>
+	<?php
+} ?>

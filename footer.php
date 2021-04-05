@@ -6,10 +6,10 @@
 					<div class="_item_footer">
 						<div class="title-footer"><h3>Team IT _ Thiết kế Website</h3></div>
 						<ul>
-							<li><span>Mã số thuế:</span> 5801358357</li>
-							<li><span>Điện Thoại:</span> 1900 66 89</li>
-							<li><span>Email:</span> temit@gmail.com</li>
-							<li><span>Địa chỉ:</span>366 Phan Văn Trị, Phường 5, TP. Hồ Chí Minh</li>
+							<li><span>Mã số thuế:</span> <?php the_field('ma_so_thue','option'); ?></li>
+							<li><span>Điện Thoại:</span> <?php the_field('phone','option'); ?></li>
+							<li><span>Email:</span> <?php the_field('email','option'); ?></li>
+							<li><span>Địa chỉ:</span><?php the_field('address','option'); ?></li>
 						</ul>
 					</div>
 					<div class="_item_footer">
@@ -22,9 +22,9 @@
 							?>
 							<div class="social">
 								<ul>
-									<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href=""><img src="<?php echo $zalo_icon['url']; ?>" alt="image"></a></li>
-									<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+									<li><a href="<?php the_field('facebook','option'); ?>"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="<?php the_field('zalo','option'); ?>"><img src="<?php echo $zalo_icon['url']; ?>" alt="image"></a></li>
+									<li><a href="<?php the_field('youtube','option'); ?>"><i class="fab fa-youtube"></i></a></li>
 								</ul>
 							</div>
 							<?php

@@ -22,7 +22,7 @@
           <div class="site-branding">
             <div class="site-logo">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/images/logoNTA.png" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
+                <img src="<?php the_field('logo','option'); ?>" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
               </a>
             </div>
           </div>
@@ -47,7 +47,7 @@
     <div class="site-branding">
       <div class="site-logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="">
-          <img src="<?php bloginfo('template_directory'); ?>/assets/images/logoNTA.png" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
+           <img src="<?php the_field('logo','option'); ?>" class="default-logo" alt="<?php bloginfo( 'name' ); ?>" />
         </a>
       </div>
     </div>
