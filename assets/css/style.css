@@ -1,4 +1,4 @@
-:root { --primary-color: #282828; --secondary-color: #f16b4e; --text-color: #ffffff; }
+:root { --primary-color: #282828; --secondary-color: #d82121; --text-color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-thumb { background: var(--primary-color); }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -15,7 +15,7 @@ button:hover { cursor: pointer; }
 .row-grid-layout>.right { grid-area: right; }
 .row-grid-layout>.bottom { grid-area: bottom; }
 ._des { height: 45px; overflow: hidden; width: 98%; }
-.zoom:hover { -ms-transform: scale(1.5); /* IE 9 */ -webkit-transform: scale(1.5); /* Safari 3-8 */ transform: scale(1.5); }
+.zoom:hover { -ms-transform: scale(1.2); /* IE 9 */ -webkit-transform: scale(1.2); /* Safari 3-8 */ transform: scale(1.2); }
 .zoom { transition: transform 1s; }
 .slider .owl-dots .owl-dot:hover, .slider .owl-dots .owl-dot.active { background: var(--primary-color); }
 .slider .owl-dots .owl-dot { cursor: pointer; display: inline-block; line-height: 12px; margin: 0 5px; position: relative; text-indent: -9999px; -webkit-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s; background: #e8e8e8; width: 12px; height: 12px; border-radius: 50%; }
@@ -214,7 +214,7 @@ form.search-button button { display: none; }
 ._item_product { position: relative; opacity: 0.5; overflow: hidden; }
 ._item_product:hover .hover { visibility: visible; opacity: 1; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--secondary-color); text-align: center; border-radius: 50%; }
 ._item_product .hover a { color: #282828 !important; height: 100px; width: 100px; display: flex; align-items: center; justify-content: center; line-height: 1.5; }
-._item_product:hover { opacity: 1; }
+._item_product:hover { opacity: 1; }	
 ._item_image { overflow: hidden; }
 ._item_image:hover a:after { content: ""; background: #fff; opacity: 0.5; position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
 ._read_mord a:hover { color: #ea7c64 !important; }
@@ -223,7 +223,7 @@ form.search-button button { display: none; }
 .skills { width: 100%; max-width: 600px; padding: 0 20px; margin-bottom: 100px; }
 .skill-name { font-size: 15.16pt; font-weight: 400; margin: 20px 0; }
 .skill-bar { height: 2px; background: #cacaca; border-radius: 8px; }
-.skill-per { height: 2px; background-color: #f05a48; border-radius: 8px; width: 0; position: relative; transition: 2s linear; }
+.skill-per { height: 2px; background-color:var(--secondary-color); border-radius: 8px; width: 0; position: relative; transition: 2s linear; }
 .skill-per::before { content: attr(per); position: absolute; padding: 4px 6px; background-color: #000; color: #fff; font-size: 12px; border-radius: 4px; top: -35px; right: 0; transform: translateX(50%); }
 .skill-per::after { content: ""; position: absolute; width: 10px; height: 10px; background-color: #000; top: -16px; right: 0; transform: translateX(50%) rotate(45deg); border-radius: 2px; }
 .skill { margin-bottom: 40px; }

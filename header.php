@@ -11,6 +11,7 @@
   <meta  property="og:image" content="<?php $post_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'large'); echo $post_thumbnail[0]; ?>" />
   <?php get_template_part('templates/out-site/google-tool'); ?>
   <?php get_template_part( 'includes/includes-style' ); ?>
+
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
