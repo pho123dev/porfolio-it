@@ -36,10 +36,10 @@ section.news, section.contact { font-size: 12pt; }
 section.news a { font-size: 12.75pt; }
 
 /*about*/
-.title-section ._title { font-size: 37.5pt; font-weight: bold; letter-spacing: 5px; margin-bottom: 10px; }
+.title-section ._title { font-size: 37.5pt; font-weight: bold; letter-spacing: 5px; margin-bottom: 10px;  transition: 0.5s all;}
 .title-section ._sub_title { font-size: 22.5pt; color: var(--secondary-color); letter-spacing: 3px; }
 ._btn { border: 1px solid; border-color: var(--secondary-color); width: max-content; padding: 12px 40px; }
-._btn a { color: #fff; font-size: 11.25pt; }
+._btn a { color: #fff; font-size: 11.25pt; transition: 0.5s all; }
 ._item_image a img { width: 100%; height: 100%; object-fit: cover; }
 ._item_image a { display: block; height: 100%; width: 100%; }
 section.about { margin-top: 100px; }
@@ -59,7 +59,8 @@ section.about .item-right .item-about ._bottom ._content ul li { list-style: ins
 section.about .item-right .item-about ._bottom ._content { font-size: 15pt; padding-left: 94px; }
 section.about .item-right .item-about ._bottom ._content p { line-height: 1.8; margin-bottom: 25px; }
 section.about .item-right .item-about ._bottom ._content p a { color: var(--secondary-color); }
-section.about .item-right .item-about ._top ._btn { margin-left: 85px; }
+section.about .item-right .item-about ._bottom ._content p a:hover{color:#ff7e7e !important;transition: 0.5s all;}
+section.about .item-right .item-about ._top ._btn { margin-left: 85px;    transition: 0.5s all; }
 
 /*product*/
 .bg-product { padding: 80px 135px; }
@@ -67,7 +68,7 @@ section.about .item-right .item-about ._top ._btn { margin-left: 85px; }
 .bg-product:before { max-width: 550px; max-height: 550px; }
 section.product { background: #000000; max-width: 1920px; margin: 25px auto; }
 section.product .item-right .item-about ._bottom { margin-top: 150px; }
-section.product .item-right .item-product ._bottom ._btn { line-height: 17px; margin-top: 50px; margin-bottom: 50px; }
+section.product .item-right .item-product ._bottom ._btn { line-height: 17px; margin-top: 50px; margin-bottom: 50px;transition: 0.5s all; }
 
 /*news*/
 section.news { margin-top: 100px; }
@@ -203,13 +204,13 @@ form.search-button button { display: none; }
 .related-post .row-grid-3 { gap: 30px; }
 .related-post ._item_image { height: 234px; }
 ._single { margin-bottom: 50px; }
-.item-about.top .meta { margin-bottom: 40px; }
+.item-about.top .meta { margin-bottom: 40px; font-size: 13px; }
 .item-about.top h1 { margin-bottom: 5px; }
 ._single ._content { margin-top: 30px; }
 .map ._iframe { height: 485px; margin-bottom: 100px; }
 .map .title-section { margin-bottom: 40px; }
 ._btn:hover { background: var(--secondary-color); }
-._btn a:hover, ._btn:hover a, ._btn:hover { color: #000 !important; }
+._btn a:hover, ._btn:hover a, ._btn:hover { color: #fff !important; }
 .title-section ._title:hover { color: var(--secondary-color); }
 ._item_product { position: relative; opacity: 0.5; overflow: hidden; }
 ._item_product:hover .hover { visibility: visible; opacity: 1; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--secondary-color); text-align: center; border-radius: 50%; }
@@ -276,3 +277,7 @@ section.contact.contactbottom { margin-top: 0; }
 .slide-in-top-19 { -webkit-animation: slide-in-top 1.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-top 1.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
 ._text_1.orbs span { display: inline-block; }
 ._text_1.orbs ul { display: flex; }
+.slide-in-left-l1{-webkit-animation:slide-in-left 1s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-left 1s cubic-bezier(.25,.46,.45,.94) both}
+ @-webkit-keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+ .slide-in-right{-webkit-animation:slide-in-right 1s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-right 1s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}

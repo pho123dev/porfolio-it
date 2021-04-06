@@ -12,7 +12,7 @@ if( have_rows('about') ){
 						<div class="row-grid-2">
 							<div class="item-left">
 								<div class="item-about">
-									<div class="_number">01</div>
+									<div class="_number slide-in-left-l1">01</div>
 									<div class="_title"><div class="_rotate"><?php echo $title; ?></div></div>
 								</div>
 							</div>
@@ -41,7 +41,7 @@ if( have_rows('about') ){
 												<?php } ?>
 											</div>
 										</div>
-										<div class="_sub_title"><?php echo $top['sub_title']; ?></div>
+										<div class="_sub_title slide-in-right"><?php echo $top['sub_title']; ?></div>
 										<div class="_btn"><a href="<?php echo $top['button_link']; ?>"><?php echo $top['button_text']; ?></a></div>
 									</div>
 									<div class="_bottom">

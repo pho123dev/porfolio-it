@@ -25,9 +25,9 @@
 													<div class="_content">
 														<h1><?php the_title(); ?></h1>
 														<div class="meta">
-															<span class="author">
-																<?php the_author(); ?>
-															</span> / 
+															<!-- <span class="author">
+																<?php //the_author(); ?>
+															</span> /  -->
 															<span class="date"><?php echo get_the_date("d - m - Y");?></span> 
 														</div>
 														<div class="image"><img src=" <?php the_post_thumbnail_url(); ?>" alt="image"></div>
