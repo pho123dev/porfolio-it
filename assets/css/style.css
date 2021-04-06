@@ -122,6 +122,7 @@ section.info_contact .item-left { display: flex; align-items: center; justify-co
 .social ul { display: flex; }
 .social ul li { margin-right: 10px; }
 .social ul li a { display: flex; height: 37px; width: 37px; background: var(--secondary-color); justify-content: center; align-items: center; }
+.social ul li a:hover{background: #fff; transition: 0.5s all;}
 .social ul li a img { width: max-content; object-fit: contain; }
 .social ul li a i { color: #333333; }
 .title-footer h3 { font-size: 12.73pt; font-weight: bold; letter-spacing: 2px; }
